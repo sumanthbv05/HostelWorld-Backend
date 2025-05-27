@@ -8,10 +8,7 @@ import authRoutes from './routes/AuthRoutes.js';
 dotenv.config();
 
 const app = express();
-app.use(cors({
-    origin: ['hostel-world-frontend.vercel.app'],
-    credentials: true
-}))
+app.use(cors());
 app.use(express.json());
 
 app.use('/api/hostels', hostelRoutes);

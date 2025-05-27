@@ -4,7 +4,7 @@ import Booking from '../models/Booking.js'
 
 const router = express.Router();
 
-// GET /api/hostels?city=London
+
 router.get('/', async (req, res) => {
     try {
         const { city } = req.query;
@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-// GET /api/hostels/:id
+
 router.get('/:id', async (req, res) => {
     try {
         const hostel = await Hostel.findById(req.params.id);
